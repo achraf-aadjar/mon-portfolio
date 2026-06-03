@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achraf Aadjar — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AA<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"     data-i18n="nav.about">À propos</a></li>
+      <li><a href="#skills"    data-i18n="nav.skills">Compétences</a></li>
+      <li><a href="#projects"  data-i18n="nav.projects">Projets</a></li>
+      <li><a href="#education" data-i18n="nav.education">Formation</a></li>
+      <li><a href="#contact"   data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">ع</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <!-- Sun icon -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting" data-i18n="hero.greeting">Salut, je suis</p>
+      <h1 class="hero-name">
+        <span class="name-line">Achraf</span>
+        <span class="name-line accent">Aadjar</span>
+      </h1>
+      <div class="hero-title-wrapper">
+        <span data-i18n="hero.iam">Je suis </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-sub" data-i18n="hero.sub">
+        Étudiant ingénieur passionné par le développement web<br>et la création d'interfaces modernes.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.btn1">Voir mes projets</a>
+        <a href="#contact"  class="btn btn-outline"  data-i18n="hero.btn2">Me contacter</a>
+      </div>
+      <div class="hero-scroll">
+        <span data-i18n="hero.scroll">Défiler</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+
+      <!-- Status badge -->
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span data-i18n="hero.status">Disponible pour des opportunités</span>
+      </div>
+
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="file-name">achraf.py</span>
+        </div>
+        <pre class="code-content"><code><span class="c-keyword">class</span> <span class="c-class">Achraf</span>:
+  <span class="c-keyword">def</span> <span class="c-func">__init__</span>(self):
+    self.name = <span class="c-str">"Achraf Aadjar"</span>
+    self.role = <span class="c-str">"Eng. Student"</span>
+    self.school = <span class="c-str">"ÉPT, Sénégal"</span>
+    self.skills = [
+      <span class="c-str">"Python"</span>, <span class="c-str">"C"</span>,
+      <span class="c-str">"JavaScript"</span>,
+      <span class="c-str">"HTML/CSS"</span>
+    ]
+    self.open_to = <span class="c-str">"opportunities"</span></code></pre>
+      </div>
+
+      <!-- Mini stat cards -->
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <span class="stat-number">6+</span>
+          <span class="stat-label" data-i18n="hero.stat1">Projets</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="stat-number">4</span>
+          <span class="stat-label" data-i18n="hero.stat2">Langues parlées</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="stat-number">3+</span>
+          <span class="stat-label" data-i18n="hero.stat3">Ans de code</span>
+        </div>
+      </div>
+
+      <!-- Currently learning badge -->
+      <div class="hero-learning">
+        <span class="learning-icon">
+          <i class="devicon-react-original colored"></i>
+        </span>
+        <div class="learning-text">
+          <span class="learning-label" data-i18n="hero.learning.label">En train d'apprendre</span>
+          <span class="learning-val">React · Node.js · TypeScript</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01</span>
+        <h2 class="section-title" data-i18n="about.title">À propos de moi</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about.p1">
+            Je suis étudiant ingénieur en Informatique et Télécommunications à l'École Polytechnique de Thiès, au Sénégal. Ce qui me passionne vraiment, c'est le développement web — créer des interfaces qui fonctionnent bien et qui ont du style.
+          </p>
+          <p data-i18n="about.p2">
+            Rigoureux et curieux, je cherche à appliquer mes compétences à des projets web concrets, en collaboration avec des équipes motivées. Mon objectif : devenir ingénieur full-stack capable de construire des produits complets, du front-end au back-end.
+          </p>
+          <div class="about-facts">
+            <div class="fact-item">
+              <!-- Pin icon -->
+              <svg class="fact-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span data-i18n="about.location">Thiès, Sénégal</span>
+            </div>
+            <div class="fact-item">
+              <!-- Graduation cap icon -->
+              <svg class="fact-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              <span data-i18n="about.school">École Polytechnique de Thiès</span>
+            </div>
+            <div class="fact-item">
+              <!-- Languages icon -->
+              <svg class="fact-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span data-i18n="about.langs">Arabe · Tamazight · Français · Anglais</span>
+            </div>
+          </div>
+          <a href="CV AADJAR ACHRAF (EN).pdf" download class="btn btn-outline btn-sm" data-i18n="about.cv">
+            Télécharger mon CV
+          </a>
+        </div>
+        <div class="about-img-wrapper">
+          <div class="about-img-frame">
+            <div class="img-placeholder">
+              <div class="avatar-initials">AA</div>
+              <div class="avatar-ring ring1"></div>
+              <div class="avatar-ring ring2"></div>
+            </div>
+          </div>
+          <div class="floating-badge badge1">
+            <i class="devicon-javascript-plain colored"></i>
+          </div>
+          <div class="floating-badge badge2">
+            <i class="devicon-python-plain colored"></i>
+          </div>
+          <div class="floating-badge badge3">
+            <i class="devicon-html5-plain colored"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2 class="section-title" data-i18n="skills.title">Compétences</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Labels by category -->
+      <div class="skills-categories">
+
+        <div class="skills-cat-block">
+          <p class="skills-cat-label" data-i18n="skills.cat.frontend">Front-End</p>
+          <div class="tech-showcase">
+            <div class="tech-card" style="--glow:#61DAFB">
+              <i class="devicon-react-original colored"></i>
+              <span>React</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#3178C6">
+              <i class="devicon-typescript-plain colored"></i>
+              <span>TypeScript</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#F7DF1E">
+              <i class="devicon-javascript-plain colored"></i>
+              <span>JavaScript</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#E34F26">
+              <i class="devicon-html5-plain colored"></i>
+              <span>HTML5</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#1572B6">
+              <i class="devicon-css3-plain colored"></i>
+              <span>CSS3</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#06B6D4">
+              <i class="devicon-tailwindcss-plain colored"></i>
+              <span>Tailwind</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#7952B3">
+              <i class="devicon-bootstrap-plain colored"></i>
+              <span>Bootstrap</span><div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-cat-block">
+          <p class="skills-cat-label" data-i18n="skills.cat.backend">Back-End & DB</p>
+          <div class="tech-showcase">
+            <div class="tech-card" style="--glow:#339933">
+              <i class="devicon-nodejs-plain colored"></i>
+              <span>Node.js</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#000000">
+              <i class="devicon-express-original colored"></i>
+              <span>Express</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#4479A1">
+              <i class="devicon-mysql-plain colored"></i>
+              <span>MySQL</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#3776AB">
+              <i class="devicon-python-plain colored"></i>
+              <span>Python</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#A8B9CC">
+              <i class="devicon-c-plain colored"></i>
+              <span>C</span><div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-cat-block">
+          <p class="skills-cat-label" data-i18n="skills.cat.tools">Outils</p>
+          <div class="tech-showcase">
+            <div class="tech-card" style="--glow:#F05032">
+              <i class="devicon-git-plain colored"></i>
+              <span>Git</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#181717">
+              <i class="devicon-github-original colored"></i>
+              <span>GitHub</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#007ACC">
+              <i class="devicon-vscode-plain colored"></i>
+              <span>VS Code</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#F24E1E">
+              <i class="devicon-figma-plain colored"></i>
+              <span>Figma</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#FF6C37">
+              <i class="devicon-postman-plain colored"></i>
+              <span>Postman</span><div class="tech-glow"></div>
+            </div>
+            <div class="tech-card" style="--glow:#FFA500">
+              <i class="devicon-linux-plain colored"></i>
+              <span>Linux</span><div class="tech-glow"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Skill bars -->
+      <div class="skills-bars-section">
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-html5-plain colored skill-row-icon"></i>
+            <span>HTML / CSS</span><span>85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-react-original colored skill-row-icon"></i>
+            <span>React</span><span>72%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-javascript-plain colored skill-row-icon"></i>
+            <span>JavaScript</span><span>78%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-nodejs-plain colored skill-row-icon"></i>
+            <span>Node.js / Express</span><span>65%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-typescript-plain colored skill-row-icon"></i>
+            <span>TypeScript</span><span>60%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-python-plain colored skill-row-icon"></i>
+            <span>Python</span><span>75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-c-plain colored skill-row-icon"></i>
+            <span>C</span><span>80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-item-row">
+          <div class="skill-row-meta">
+            <i class="devicon-mysql-plain colored skill-row-icon"></i>
+            <span>MySQL</span><span>68%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:68%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03</span>
+        <h2 class="section-title" data-i18n="projects.title">Mes Projets</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#A8B9CC">
+              <i class="devicon-c-plain colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj1.title">Systèmes Modulaires en C</h3>
+          <p class="project-desc" data-i18n="proj1.desc">
+            Développement de plusieurs systèmes modulaires : gestion de bibliothèque, portefeuille électronique et annuaire téléphonique. Architecture en modules avec gestion de fichiers.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small tag-c"><i class="devicon-c-plain"></i> C</span>
+            <span class="tag tag-small">Structures</span>
+            <span class="tag tag-small">Fichiers</span>
+          </div>
+        </div>
+
+        <div class="project-card project-featured">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#E34F26">
+              <i class="devicon-html5-plain colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <span class="featured-badge" data-i18n="proj.featured">Récent</span>
+          <h3 class="project-title" data-i18n="proj2.title">Développement Web</h3>
+          <p class="project-desc" data-i18n="proj2.desc">
+            Conception et développement de sites vitrine responsive en HTML, CSS et JavaScript, avec focus sur l'interface utilisateur et l'intégration front-end. Design mobile-first.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="tag tag-small"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="tag tag-small"><i class="devicon-javascript-plain colored"></i> JS</span>
+            <span class="tag tag-small">Responsive</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#3776AB">
+              <i class="devicon-python-plain colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj3.title">Analyse de Données Python</h3>
+          <p class="project-desc" data-i18n="proj3.desc">
+            Collecte, prétraitement et visualisation de données avec Python. Utilisation de Pandas, Matplotlib et Seaborn pour l'interprétation des résultats et la rédaction de rapports.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="tag tag-small"><i class="devicon-pandas-plain colored"></i> Pandas</span>
+            <span class="tag tag-small">Matplotlib</span>
+            <span class="tag tag-small">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 4 — Feuille de Présence Virtuelle ===== -->
+        <div class="project-card project-featured">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#F7DF1E">
+              <i class="devicon-javascript-plain colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <span class="featured-badge" data-i18n="proj.featured">Récent</span>
+          <h3 class="project-title" data-i18n="proj4.title">Feuille de Présence Virtuelle</h3>
+          <p class="project-desc" data-i18n="proj4.desc">
+            Application web de gestion des présences en temps réel. Les étudiants pointent via une interface simple, les données sont stockées en local et exportables. Conçu pour les enseignants de l'ÉPT.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="tag tag-small"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="tag tag-small"><i class="devicon-javascript-plain colored"></i> JS</span>
+            <span class="tag tag-small">LocalStorage</span>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 5 — Task Manager React ===== -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#61DAFB">
+              <i class="devicon-react-original colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj5.title">Task Manager — React App</h3>
+          <p class="project-desc" data-i18n="proj5.desc">
+            Application de gestion de tâches construite avec React et les Hooks. Filtrage par statut, drag-and-drop, persistance localStorage. Premier projet React personnel pour apprendre les composants et le state management.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-react-original colored"></i> React</span>
+            <span class="tag tag-small">Hooks</span>
+            <span class="tag tag-small">CSS Modules</span>
+            <span class="tag tag-small">LocalStorage</span>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 6 — REST API Express ===== -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#339933">
+              <i class="devicon-nodejs-plain colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj6.title">REST API — Gestion Étudiants</h3>
+          <p class="project-desc" data-i18n="proj6.desc">
+            API RESTful complète pour la gestion d'une base d'étudiants. CRUD complet, authentification JWT, middleware de validation. Testé avec Postman, base de données MySQL.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="tag tag-small">Express</span>
+            <span class="tag tag-small"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span class="tag tag-small">JWT</span>
+            <span class="tag tag-small">REST</span>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 7 — Site Vitrine Restaurant ===== -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#e8a020">
+              <i class="devicon-html5-plain colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj7.title">La Palmeraie — Site Vitrine Restaurant</h3>
+          <p class="project-desc" data-i18n="proj7.desc">
+            Site vitrine élégant pour un restaurant marocain. Menu interactif, galerie photos, réservation en ligne, animations CSS avancées. Design chaleureux avec palette dorée.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span class="tag tag-small"><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span class="tag tag-small"><i class="devicon-javascript-plain colored"></i> JS</span>
+            <span class="tag tag-small">Animations</span>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 8 — E-Commerce Mode ===== -->
+        <div class="project-card project-featured">
+          <span class="featured-badge" data-i18n="proj.featured">Récent</span>
+          <div class="project-top">
+            <div class="project-icon-box" style="--pcolor:#a855f7">
+              <i class="devicon-react-original colored"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/achraf-aadjar" target="_blank" class="icon-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-i18n="proj8.title">LuxeStyle — E-Commerce Mode</h3>
+          <p class="project-desc" data-i18n="proj8.desc">
+            Boutique e-commerce complète avec React. Catalogue produits, panier dynamique, filtres par catégorie, page checkout, responsive mobile-first. UI sombre style haut de gamme.
+          </p>
+          <div class="project-tags">
+            <span class="tag tag-small"><i class="devicon-react-original colored"></i> React</span>
+            <span class="tag tag-small">Context API</span>
+            <span class="tag tag-small"><i class="devicon-tailwindcss-plain colored"></i> Tailwind</span>
+            <span class="tag tag-small">Panier</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04</span>
+        <h2 class="section-title" data-i18n="edu.title">Formation</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item active">
+          <div class="timeline-dot">
+            <!-- Graduation cap -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024 – <span data-i18n="edu.present">Présent</span></div>
+            <h3 data-i18n="edu1.title">Ingénierie en Informatique et Télécommunications</h3>
+            <p class="timeline-org">École Polytechnique de Thiès — Sénégal</p>
+            <p data-i18n="edu1.desc">Formation d'ingénieur en informatique, réseaux, cybersécurité et développement logiciel.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <!-- Book icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021 – 2023</div>
+            <h3 data-i18n="edu2.title">Classes Préparatoires Scientifiques</h3>
+            <p class="timeline-org">École Polytechnique de Thiès — Sénégal</p>
+            <p data-i18n="edu2.desc">Préparation intensive en mathématiques, physique et sciences de l'ingénieur.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <!-- Award/star icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2020 – 2021</div>
+            <h3 data-i18n="edu3.title">Baccalauréat Scientifique</h3>
+            <p class="timeline-org">Collège Royal Préparatoire aux Techniques Aéronautiques — Maroc</p>
+            <p data-i18n="edu3.desc">Formation scientifique et militaire, obtention du baccalauréat scientifique.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05</span>
+        <h2 class="section-title" data-i18n="contact.title">Me contacter</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p class="contact-lead" data-i18n="contact.lead">
+            Vous avez un projet, une opportunité, ou juste envie de discuter tech ? N'hésitez pas à me contacter !
+          </p>
+          <div class="contact-links">
+            <a href="mailto:aachraf@ept.sn" class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label" data-i18n="contact.email">Email</span>
+                <span class="contact-val">aachraf@ept.sn</span>
+              </div>
+            </a>
+            <a href="tel:+221787590340" class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label" data-i18n="contact.phone">Téléphone</span>
+                <span class="contact-val">+221 78 759 03 40</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/achraf-aadjar-a38623293" target="_blank" class="contact-item">
+              <div class="contact-icon contact-icon-linkedin">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-val">achraf-aadjar</span>
+              </div>
+            </a>
+            <a href="https://github.com/achraf-aadjar" target="_blank" class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-val">achraf-aadjar</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" data-i18n="form.name">Nom</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" data-i18n="form.send">Envoyer le message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>AA<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p data-i18n="footer.copy">Conçu & développé par Achraf Aadjar · 2025</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/achraf-aadjar-a38623293" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://github.com/achraf-aadjar" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
